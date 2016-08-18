@@ -230,7 +230,8 @@
                 init: empty,
                 goto: empty,
                 prev: empty,
-                next: empty
+                next: empty,
+                back: empty
             };
         }
 
@@ -427,7 +428,6 @@
         // (by index, id or element), with a transition `duration` optionally
         // given as second parameter.
         var goto = function( el, duration ) {
-
             if ( !initialized || !( el = getStep( el ) ) ) {
 
                 // Presentation not initialized or given element is not a step
@@ -584,6 +584,13 @@
             return goto( next );
         };
 
+        //goback
+        var back = function() {
+            var next = steps[steps.length-1];
+            return goto( next );
+            
+        }
+
         // Adding some useful classes to step elements.
         //
         // All the steps that have not been shown yet are given `future` class.
@@ -657,7 +664,8 @@
             init: init,
             goto: goto,
             next: next,
-            prev: prev
+            prev: prev,
+            back: back
         } );
 
     };
@@ -734,7 +742,7 @@
 
             if ( event.keyCode === 9 ||
                ( event.keyCode >= 32 && event.keyCode <= 34 ) ||
-               ( event.keyCode >= 37 && event.keyCode <= 40 ) ) {
+               ( event.keyCode >= 37 && event.keyCode <= 40 ) || (event.keyCode === 27)) {
                 switch ( event.keyCode ) {
                     case 33: // Page up
                     case 37: // Left
@@ -748,6 +756,8 @@
                     case 40: // Down
                              api.next();
                              break;
+                    case 27:
+                             api.back();
                 }
 
                 event.preventDefault();

@@ -82,7 +82,7 @@ table {
     want to leave anybody behind.
 */
 body {
-    font-family: 'PT Sans', sans-serif;
+    //font-family: 'PT Sans', sans-serif;
     min-height: 740px;
 
     background: rgb(215, 215, 215);
@@ -175,7 +175,7 @@ a:focus {
     -o-box-sizing:      border-box;
     box-sizing:         border-box;
 
-    font-family: 'PT Serif', georgia, serif;
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     font-size: 48px;
     line-height: 1.5;
 }
@@ -208,7 +208,6 @@ a:focus {
 */
 .slide {
     display: block;
-
     width: 900px;
     height: 700px;
     padding: 40px 60px;
@@ -231,8 +230,12 @@ a:focus {
     display: block;
     font-size: 50px;
     line-height: 72px;
-
+    text-align: center;
     margin-top: 100px;
+}
+
+.slide p{
+    padding-left: 200px!important;
 }
 
 .slide q strong {
@@ -288,7 +291,7 @@ a:focus {
     Let's move to 'big thoughts' with centered text and custom font sizes.
 */
 #big {
-    width: 600px;
+    //width: 600px;
     text-align: center;
     font-size: 60px;
     line-height: 1;
@@ -308,11 +311,40 @@ a:focus {
 /*
     'Tiny ideas' just need some tiny styling.
 */
-#tiny {
+body{
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    color: rgb(85, 85, 85);
+}
+
+#tiny,#tiny1,#tiny2,#tiny3,#tiny4,#tiny5,#tiny6,#tiny7,#tiny8,#tiny9 {
     width: 500px;
     text-align: center;
 }
 
+.img-wrap{
+    display: inline-block;
+    position: relative;
+    width: 200px!important;
+    margin-top: 40px;
+}
+
+.img-wrap span{
+    font-size: 20px;
+    position: absolute;
+    left: 45px;
+    top: 130px;
+    margin: 0 auto;
+}
+
+#tiny5 img,#tiny10 img{
+    margin-left: 0px;
+    height: 120px;
+}
+
+#tiny10 .img-height{
+    margin-left: 0px;
+    height: 200px
+}
 /*
     This step has some animated text ...
 */
@@ -695,7 +727,9 @@ a:focus {
 
     But it was fun to learn about it, wasn't it?
 */
-
+.text-middle{
+    font-size: 20px;
+}
 /*
     That's all I have for you in this file.
     Thanks for reading. I hope you enjoyed it at least as much as I enjoyed writing it
