@@ -316,9 +316,14 @@ body{
     color: rgb(85, 85, 85);
 }
 
-#tiny,#tiny1,#tiny2,#tiny3,#tiny4,#tiny5,#tiny6,#tiny7,#tiny8,#tiny9 {
+#tiny,#tiny1,#tiny2,#tiny3,#tiny4,#tiny5,#tiny6,#tiny7,#tiny8,#tiny9,#tiny11,#tiny12,#tiny13,#tiny14,#tiny15,#tiny16{
     width: 500px;
     text-align: center;
+}
+
+#tiny11,#tiny12,#tiny13,#tiny14{
+    font-size: 25px;
+    text-align: left;
 }
 
 .img-wrap{
